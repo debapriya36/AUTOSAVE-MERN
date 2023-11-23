@@ -1,5 +1,6 @@
 import React from 'react';
 
+// CustomInput component
 const CustomInput = ({
   type = 'text',
   placeholder = 'Enter text',

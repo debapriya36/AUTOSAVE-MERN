@@ -3,9 +3,11 @@ import { useState, useEffect } from 'react';
 import axios from 'axios';
 const BASE_URL = 'http://localhost:3000';
 
+// ShowBlogs component
 const ShowBlogs = () => {
   const [blogs, setBlogs] = useState(()=>[]);
 
+  // fetch all blogs from DB | max 25 blogs will be fetched
   const fetchedBlogs = async() => {
     const response = await axios.get(`${BASE_URL}/api/v1/getBlogs`);
     console.log(response.data.data);

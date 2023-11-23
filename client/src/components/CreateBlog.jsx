@@ -13,13 +13,15 @@ const CreateBlog = () => {
   const [draftId, setDraftId] = useState(() => null);
   const [draftText, setDraftText] = useState(() => "");
 
+  // update draft in DB
   const updateDraftInDB = async (value) => {
     const response = await axios.post(`${BASE_URL}/api/v1/createAndUpdate`, { id: draftId, draft: value });
     setDraftText(response.data.data.text);
     setDraftId(response.data.data._id);
     console.log(response);
   }
-
+ 
+  // handle input change using useRef [ debounce method] and autosave to DB
   const handleInput = (event) => {
 
     const { target: { value = '' } } = event;
@@ -46,6 +48,7 @@ const CreateBlog = () => {
 
   };
 
+  // delete draft from DB
   const handleDelete = async () => {
     if (draftText) {
       const response = await axios.post(`${BASE_URL}/api/v1/deleteBlogByID`, { id: draftId });
@@ -88,7 +91,7 @@ const CreateBlog = () => {
         <button
           onClick={handleDelete}
         >
-          Click to Delete draft from DB
+          Click to Delete draft from DB!
         </button>
       </span>
     </div>

@@ -2,6 +2,7 @@ const { ApiResponse } = require('../utils/ApiResponse.utils');
 const { ApiError } = require('../utils/ApiError.utils');
 const { Blog } = require('../models/blog.models');
 
+// create and update blog
 const createAndUpdateBlog = async (req, res) => {
     let status = 201;
     try {
@@ -36,6 +37,7 @@ const createAndUpdateBlog = async (req, res) => {
     }
 };
 
+// get all blogs | limit = 25 | sort by createdAt
 const getBlogs = async (req, res) => {
     let status = 200;
     try {
@@ -50,6 +52,7 @@ const getBlogs = async (req, res) => {
     }
 }
 
+// delete blog by id
 const deleteBlogByID = async (req, res) => {
     let status = 200;
     try {

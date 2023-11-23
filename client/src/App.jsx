@@ -1,8 +1,6 @@
 
 import './App.css'
 import React from 'react'
-import { useState, useRef } from 'react';
-import axios from 'axios';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import CreateBlog from './components/CreateBlog';
 import ShowBlogs from './components/ShowBlogs';
