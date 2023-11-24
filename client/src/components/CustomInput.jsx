@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 
 // CustomInput component
 const CustomInput = ({
@@ -16,15 +16,15 @@ const CustomInput = ({
       value={value}
       {...props}
       style={{
-        fontSize: "14px",
-        padding: "10px",
-        borderRadius: "5px",
-        border: "1px solid #ccc",
-        width: "500px",
-        height: "50px",
+        fontSize: '14px',
+        padding: '10px',
+        borderRadius: '5px',
+        border: '1px solid #ccc',
+        width: '500px',
+        height: '50px'
       }}
     />
-  );
-};
+  )
+}
 
-export default CustomInput;
+export default CustomInput

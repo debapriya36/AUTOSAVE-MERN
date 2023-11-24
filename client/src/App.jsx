@@ -1,13 +1,10 @@
-
 import './App.css'
 import React from 'react'
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import CreateBlog from './components/CreateBlog';
-import ShowBlogs from './components/ShowBlogs';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
+import CreateBlog from './components/CreateBlog'
+import ShowBlogs from './components/ShowBlogs'
 
-
-function App() {
-
+function App () {
   return (
     <>
       <div>
